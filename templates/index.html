@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js ">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js">
+  </script>
+  <link rel='stylesheet' type 'text/css' href="{{url_for('static',filename='css/styles.css')}}">
+  <script type='text/javascript' src="{{ url_for('static', filename = 'js/script.js')}}"></script>
+  <title>Whats My Name?</title>
+</head>
+
+<body>
+  <li><a href="/">clear</a></li>
+  <form action='/process' method='post'>
+    Name: <input type='text' name='name_val'>
+    <input type='submit' value='Submit'>
+  </form>
+
+  <p>{{name}}</p>
+
+</body>
+
+</html>
